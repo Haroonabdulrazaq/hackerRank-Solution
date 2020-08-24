@@ -21,3 +21,5 @@ def repeatedString(s, n)
 end
 
 puts repeatedString('aba', 10)
+
+# Anagram
