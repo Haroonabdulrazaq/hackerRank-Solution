@@ -23,3 +23,21 @@ end
 puts repeatedString('aba', 10)
 
 # Anagram
+if s.length.odd?
+    return -1
+  else
+    middle = s.length/2
+    first_half = s[0,middle]
+    second_half = s[middle,s.length-1]
+     second_half =second_half.split('')
+    
+     first_half.each_char do |i|
+      second_half.each_with_index do |ele, index|
+        if i == ele
+          second_half.delete_at(index)
+            break
+        end
+      end
+     end
+    return second_half.length
+  end
