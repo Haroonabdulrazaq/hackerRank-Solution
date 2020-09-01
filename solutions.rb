@@ -41,3 +41,16 @@ if s.length.odd?
      end
     return second_half.length
   end
+
+
+  def repeatedString(s, n)
+    whole_count = n/s.length
+    remainder_count = n % s.length
+    remainder_count = s[0, remainder_count].count "a"
+    
+    num_of_a = s.count "a"
+    result = (num_of_a * whole_count) + remainder_count
+    puts result
+    end
+
+    repeatedString('abcac', 10)
