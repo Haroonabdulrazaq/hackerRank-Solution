@@ -110,7 +110,7 @@ end
               return i   # if true, return the index of the culprit from front
           else
               return str.length-i   # if false, return the index of the culprit from back
-          end
+          end                      # Remove from this=> (str.length-1-i) because of the delete at action
         end
       end
   end
