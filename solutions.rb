@@ -96,3 +96,23 @@ strangeCounter(10)
 end
 
  strangeCounter(-1)
+
+ def palindromeIndex(s)
+  str = s.split('')
+  strjoin = str.join
+  if strjoin == strjoin.reverse #Check if its palindrome
+      return -1
+  else
+      ((str.length)/2).times do |i|  # Loop through half of the string length
+        if str[i] != str[str.length-1-i] # compare the last element of the string to the first,  if they are not equal then we have a culprit
+            str.delete_at(i)               # Delete at the culprit index 
+          if str.join('') ==  str.join('').reverse # check for palindrone
+              return i   # if true, return the index of the culprit from front
+          else
+              return str.length-i   # if false, return the index of the culprit from back
+          end
+        end
+      end
+  end
+end
+puts palindromeIndex('aaab')
