@@ -25,3 +25,11 @@ function compareTriplets(a, b) {
   return [first, second];
 }
 console.log(compareTriplets([17, 28, 30], [99, 16, 8]))
+
+//Very Big Sum
+function aVeryBigSum(ar) {
+  // Write your code here
+  return ar.reduce((a, b) => a + b);
+}
+
+console.log(aVeryBigSum([1000000001, 1000000002, 1000000003, 1000000004, 1000000005]));
