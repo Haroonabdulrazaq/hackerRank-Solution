@@ -33,3 +33,17 @@ function aVeryBigSum(ar) {
 }
 
 console.log(aVeryBigSum([1000000001, 1000000002, 1000000003, 1000000004, 1000000005]));
+
+// Diagonal Difference
+function diagonalDifference(arr) {
+  let counter = arr.length-1;
+  const firstArr=[];
+  const secondArr=[];
+  for(let i = 0; i < arr.length; i++) {
+   firstArr.push(arr[i][i])
+   secondArr.push(arr[i][counter])
+    counter--;
+  }
+
+  return Math.abs(firstArr.reduce((a,b )=> a+ b) - secondArr.reduce((a,b )=> a+ b))
+}
