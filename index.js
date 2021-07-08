@@ -5,7 +5,7 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
   const samOranges = oranges.map((ele) => b + ele )
         .filter((ele) => ele>=s && ele <= t )
 
-        console.log(samApples.length );
+        console.log(samApples.length);
         console.log(samOranges.length);
 
 }
